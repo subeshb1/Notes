@@ -137,12 +137,3 @@ flags used in grep:
 * `-l`: print the names of files that contain matches, not the matches
 * `-n`: print line numbers for matching lines
 * `-v`: invert the match, i.e., only show lines that don't match
-
-## **Combining Tools**
-
-## 1. Storing output
-
-`>` is used to direct an output to a destination.
-
-    head source.txt > output.txt
-
