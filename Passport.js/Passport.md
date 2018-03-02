@@ -1,27 +1,30 @@
 To authenticate users
 
--- npm install passport <strategy>
+    -- npm install passport <strategy>
+
 Eg : npm install passport passport-google-oauth20
 
+```javascript
 // Require Passport
-const passport = require('passport');
+const passport = require("passport");
 //Require a Strategy
-const GoogleStrategy = require('passport-google-oauth20');
+const GoogleStrategy = require("passport-google-oauth20");
 
 //To use a Strategy
-passport.use( new Strategy , callback);
+passport.use(new Strategy(), callback);
 
 passport.use(
-new GoogleStrategy({
-clientID : keys.google.clientID, //For redirecting
-clientSecret: keys.google.clientSecret,
-callbackURL: '/auth/google/redirect'
-},
-() => {
+  new GoogleStrategy(
+    {
+      clientID: keys.google.clientID, //For redirecting
+      clientSecret: keys.google.clientSecret,
+      callbackURL: "/auth/google/redirect"
+    },
+    () => {}
+  )
+);
+```
 
-    })
-
-)
 // TO establish a connection wth google API goto console.developer.google.com and setup a new project with API enabled
 
 //Keep the clientID and clientSecret safe and add it to git ignore

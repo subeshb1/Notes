@@ -25,13 +25,13 @@ CRUD
 -put //Update
 -delete //Delete
 
-1. GET
-   -Used to Request Data
-   app.get('/rouute' , (req,res,next) => {
-   res.status(statusCode).send(data);
-   //404 for data not found
-   //200 is default for data found and sent
-   });
+1.  GET
+    -Used to Request Data
+    app.get('/rouute' , (req,res,next) => {
+    res.status(statusCode).send(data);
+    //404 for data not found
+    //200 is default for data found and sent
+    });
 
 //Route Parameter Same for all other requests
 app.get('/route/:id',(req,res,next) => {
@@ -42,13 +42,13 @@ app.get('/route/:id/countries',(req,res,next) => { ///route/1/countries?age=1&na
 req.query//returns object
 });
 
-2. Put
-   -Used to update Data
-   app.putp('/rouute' , (req,res,next) => {
-   res.status(statusCode).send(data);
-   //404 for data not found
-   //202 is default for data found and sent
-   });
+2.  Put
+    -Used to update Data
+    app.putp('/rouute' , (req,res,next) => {
+    res.status(statusCode).send(data);
+    //404 for data not found
+    //202 is default for data found and sent
+    });
 
 3.POST
 same 201 for new data 400 for invalid
