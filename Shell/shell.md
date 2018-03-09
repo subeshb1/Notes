@@ -230,7 +230,6 @@ To create a shell variable, you simply assign a value to a name:
     $ echo $training
     seasonal/summer.csv
 
-
 ## 3. Repeating Commands
 
 Shell variables are also used in loops, which repeat commands many times. If we run this command:
@@ -242,9 +241,35 @@ it produces:
     gif
     jpg
     png
+
 The loop's parts are:
 
 * The skeleton `for ...variable... in ...list...; ...body...; done
 * The list of things the loop is to process (in our case, the words gif, jpg, and png).
 * The variable that keeps track of which thing the loop is currently processing (in our case, suffix).
 * The body of the loop that does the processing (in our case, echo $suffix).
+
+## 4. Save Commands
+
+You can save commands in a `.sh` file and run then using:
+
+    bash file.sh
+
+## 5. Passing file names to script (Arguments)
+
+We can use special expression `$@` to mean "all of the command-line parameters given to the script". Suppose file.sh contains:
+
+    sort $@ | uniq
+
+then when the file is run:
+
+    bash file.sh filename
+
+the shell replaces `$@` with filename and processes one file.
+
+You can also pass in multiple arguments as `$1` `$2` and so on.
+
+Example:
+
+    head -n $2 $1 | tail -n 1 | cut -d , -f $3  // In a script
+    bash get-field.sh seasonal/summer.csv 4 2 // To execute
