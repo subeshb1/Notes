@@ -225,4 +225,26 @@ To get a complete list (which is quite long), we can type `set` in the shell.
 ## 2. Local Variables (Shell Variable)
 
 To create a shell variable, you simply assign a value to a name:
-training=seasonal/summer.csv
+
+    training=seasonal/summer.csv
+    $ echo $training
+    seasonal/summer.csv
+
+
+## 3. Repeating Commands
+
+Shell variables are also used in loops, which repeat commands many times. If we run this command:
+
+    for suffix in gif jpg png; do echo $suffix;done
+
+it produces:
+
+    gif
+    jpg
+    png
+The loop's parts are:
+
+* The skeleton `for ...variable... in ...list...; ...body...; done
+* The list of things the loop is to process (in our case, the words gif, jpg, and png).
+* The variable that keeps track of which thing the loop is currently processing (in our case, suffix).
+* The body of the loop that does the processing (in our case, echo $suffix).
