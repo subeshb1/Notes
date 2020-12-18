@@ -1,0 +1,42 @@
+a {
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  /* border: 1px solid black; */
+  padding: 4px 10px;
+  /* background: cadetblue; */
+  font-size: 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: none;
+  color: white;
+  /* background: black; */
+  margin: 10px;
+  padding: 10px;
+}
+
+a:hover {
+  background: rgb(81, 79, 79);
+}
+body {
+  margin: 0;
+}
+p {
+  font-size: 20px;
+}
+
+.navbar {
+  background: black;
+  display: flex;
+}
+div {
+  font-family: cursive;
+  
+}
+.cursive-text {
+  font-family: cursive;
+}
+
+.blue-color {
+  color: blue;
+}

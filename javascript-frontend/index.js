@@ -1,6 +1,17 @@
-function sum(a,b) {
-  return a+b;
+function ageCalculator(birthDateString) {
+    const birthYear = new Date(birthDateString).getFullYear();
+    const currentYear = new Date().getFullYear();
+    return currentYear-birthYear
 }
+// console.log(ageCalculator(new Date(diff)));
 
+window.onload = function () {
 
-console.log(sum(1,2))
+    let button = document.getElementById('button1');
+    
+    button.onclick = function () {
+        let userDate =  document.getElementById('birthYear').value;
+        // ageCalculator(userDate)
+       alert(ageCalculator(userDate))
+    }
+}
